@@ -1,8 +1,12 @@
-@import '../Abstract/Mixin';
+@import "../Abstract/Mixin";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
 
-.commingsoon-main{
-    background-color: #ff1750ed;
-    max-width: 100vw;
+.commingsoon-main {
+    background: rgb(255, 23, 80);
+    background: linear-gradient(90deg,
+            rgba(255, 23, 80, 1) 42%,
+            rgba(255, 252, 252, 1) 100%);
+    max-width: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,132 +16,186 @@
     padding-bottom: 2rem;
     color: white;
 
-    @include mobile{
+    @include mobile {
         max-width: 100vw;
-        height: 100vh;
+        max-height: max-content;
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+        background: rgb(255, 252, 252);
+        background: linear-gradient(0deg,
+                rgba(255, 252, 252, 1) 0%,
+                rgba(255, 23, 80, 1) 96%);
         // padding: 2rem;
     }
 
-    .subhead-1{
-        font-size: 5rem;
-        font-weight: 700;
+    .logo-container {
+        // background-color: black;
+        width: 20%;
 
-        @include mobile{
-            font-size: 2.5rem;
+        @include mobile {
+            width: 100%;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
-    .subhead-2{
-        font-size: 2rem;
-        @include mobile{
-            font-size: 1.5rem;
-        }
-    }
-    .subhead-3{
-        padding-top: 3.5rem;
+
+    .subhead-3 {
+        padding-top: 1rem;
+        line-height: 3rem;
+        padding-bottom: 2.9rem;
         font-size: 6rem;
         font-weight: 700;
 
         // font-weight: 700;
-        @include mobile{
-            padding-top: 5rem;
+        @include mobile {
+            // padding-top: 1rem;
+            padding-top: 0rem;
             width: 135%;
             font-size: 2.6rem;
+            padding-bottom: 0.8rem;
             // background-color: black;
         }
-        @include tablet{
+
+        @include tablet {
             width: 145%;
         }
     }
-    .subhead-4{
+
+    .subhead-4 {
         width: 20%;
         font-size: 2rem;
 
-        @include mobile{
+        @include mobile {
             width: 100%;
             font-size: 1.5rem;
-            padding-top: 1.5rem;
+            // padding-top: 1rem;
         }
 
-        @include tablet{
+        @include tablet {
             width: 44%;
         }
     }
-    .subhead-input{
+
+    .subhead-input {
         padding-top: 3rem;
         display: flex;
         gap: 1rem;
 
-        @include mobile{
+        @include mobile {
             padding-top: 6rem;
         }
-        @include tablet{
+
+        @include tablet {
             width: 60%;
             justify-content: space-between;
             // background-color: green;
         }
 
-       .input-form{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        .input-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Rubik', sans-serif;
 
-        @include mobile{
-            flex-direction: column;
-            width: 100%;
-        }
-        @include tablet{
-            flex-direction: column;
-            width: 100%;
-        }
-        .inp-email{
-            padding: 0.8rem;
-            border: none;
-            border-radius: 20px;
-            width: 20vw;
 
-            @include mobile{
-                width: 150%;
-            }
-            @include tablet{
+            @include mobile {
+                flex-direction: column;
                 width: 100%;
             }
-        }
-        .submit{
-            padding: 0.8rem;
-            border-radius: 20px;
-            width: 8vw;border: none;
-            background-color: black;
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
 
-            @include mobile{
-                width: 90%;
+            @include tablet {
+                flex-direction: column;
+                width: 100%;
             }
-            @include tablet{
-                width: 60%;
+
+            .inp-email {
+                padding: 0.8rem;
+                border: none;
+                border-radius: 20px;
+                width: 20vw;
+                font-family: 'Rubik', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+
+
+
+                @include mobile {
+                    width: 150%;
+                }
+
+                @include tablet {
+                    width: 100%;
+                }
+            }
+
+            .submit {
+                padding: 0.8rem;
+                border-radius: 20px;
+                width: 8vw;
+                border: none;
+                background-color: black;
+                color: white;
+                font-size: 1.2rem;
+                font-family: 'Rubik', sans-serif;
+                cursor: pointer;
+
+                @include mobile {
+                    width: 90%;
+                }
+
+                @include tablet {
+                    width: 60%;
+                }
             }
         }
-       }
     }
-    .social-media{
+
+    .social-media {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1rem;
         color: white;
-        padding-top: 8rem;
+        padding-top: 3rem;
         padding-bottom: 0rem;
 
-        @include tablet{
+        @include tablet {
             padding-top: 2rem;
         }
 
-        .twitter, .instagram, .facebook{
+        @include mobile {
+            padding-top: 1rem;
+            background-color: white;
+            // position: relative;
+            bottom: -2.5rem;
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
+            width: 100vw;
+            margin-top: 7.9rem;
+            padding-bottom: 1rem;
+            // padding-bottom: rem;
+            // height: fit-content;
+        }
+
+        .twitter,
+        .instagram,
+        .facebook {
             border-radius: 50%;
             padding: 0.5rem;
             background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mobile {
+                font-size: 1.5rem;
+                // background-color: #ff1750ed;
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ import { FaTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+import Logoimg from '../Assests/logo-diraly-01-01 (1).png'
 
 const CommingSoon = () => {
   const [email, setEmail] = useState("");
@@ -36,8 +37,10 @@ const CommingSoon = () => {
 
   return (
     <div className="commingsoon-main">
-      <div className="subhead-1">diraly</div>
-      <div className="subhead-2">home, anywhere</div>
+      <div className="logo-container">
+        <img src={Logoimg} alt="" className="logo"/>
+      </div>
+      {/* <div className="subhead-2">home, anywhere</div> */}
       <div className="subhead-3">Comming Soon</div>
       <div className="subhead-4">Be the first to know when we go live</div>
       <div className="subhead-input">
