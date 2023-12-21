@@ -55,15 +55,9 @@ const CommingSoon = () => {
           <button className="submit">Submit</button>
         </form>
       </div>
-      <div className="social-media">
-        <div className="twitter">
-          <FaTwitter />
-        </div>
+      <div className="social-media">  
         <div className="instagram">
-          <FaInstagram />
-        </div>
-        <div className="facebook">
-          <FaFacebook />
+          <a href="https://www.instagram.com/diralyofficial?igsh=YzVkODRmOTdmMw==" className="social-link"><FaInstagram /></a>
         </div>
       </div>
     </div>
